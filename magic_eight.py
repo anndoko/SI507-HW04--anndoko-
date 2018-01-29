@@ -1,14 +1,11 @@
 import random
 
 # Create a function that asks users “What is your question?” (or something similar) and saves the response.
-
 def prompt():
-    question = input("What is your question?")
-    return question
+    user_question = input("Please enter your question or enter 'quit' to end the program.\n")
+    return user_question
 
-q = prompt()
-print(q)
-
+# Create a list of 20 answers
 magic_ans = [
 "It is certain",
 "It is decidedly so",
@@ -32,5 +29,8 @@ magic_ans = [
 "Very doubtful",
 ]
 
-answer = random.choice(magic_ans)
-print(answer)
+user_input = ""
+while user_input != "quit":
+    user_input = prompt()
+    answer = random.choice(magic_ans)
+    print(answer)
