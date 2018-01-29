@@ -32,5 +32,10 @@ magic_ans = [
 user_input = ""
 while user_input != "quit":
     user_input = prompt()
-    answer = random.choice(magic_ans)
-    print(answer)
+
+    # checks if user input is a question (i.e., ends in a ‘?’) and, if not, prints “I’m sorry, I can only answer questions.”
+    if user_input[-1] != "?":
+        print("I’m sorry, I can only answer questions.")
+    else:
+        answer = random.choice(magic_ans)
+        print(answer)
